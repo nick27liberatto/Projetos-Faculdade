@@ -1,2 +1,2 @@
 # Projetos-PDM2
-College Projects
+Trabalhos sobre Programação de Dispositivos Móveis
