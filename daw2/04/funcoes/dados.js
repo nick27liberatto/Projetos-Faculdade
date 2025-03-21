@@ -1,7 +1,7 @@
 // Nicolas Liberatto Nune - 20/03 - Gerenciador de Arquivos JSON
 
 const fs = require('fs');
-const arquivo = '../dados/dados.json';
+const arquivo = './dados/dados.json';
 
 // Função para carregar os dados do arquivo JSON
 function carregarDados() {

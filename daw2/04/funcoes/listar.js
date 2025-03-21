@@ -1,7 +1,7 @@
 // Nicolas Liberatto Nune - 20/03 - Gerenciador de Arquivos JSON
 
+const readline = require('readline');
 const { carregarDados } = require('./dados');
-const { rl } = require('../index')
 
 // Listar todos os registros
 function listarRegistros(callback) {
@@ -17,4 +17,4 @@ function listarRegistros(callback) {
     callback();
 }
 
-module.exports = { listarRegistros, rl }; 
+module.exports = { listarRegistros }; 

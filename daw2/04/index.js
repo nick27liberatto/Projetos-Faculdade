@@ -1,15 +1,14 @@
 // Nicolas Liberatto Nune - 20/03 - Gerenciador de Arquivos JSON
-var funcoes = require('./modulos/modulos');
 
+const funcoes = require('./modulos/modulos');
 const readline = require('readline');
-const { carregarDados, salvarDados } = require('./funcoes/dados');
-
-const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
-});
 
 function mostrarMenu() {
+    const rl = readline.createInterface({
+        input: process.stdin,
+        output: process.stdout
+    });
+
     console.log("\n=== Gerenciador de Dados JSON ===");
     console.log("1 - Adicionar novo registro");
     console.log("2 - Listar registros");
@@ -18,12 +17,13 @@ function mostrarMenu() {
     console.log("5 - Sair");
 
     rl.question("Escolha uma opção: ", (opcao) => {
+        rl.close();
         switch (opcao) {
             case '1':
                 funcoes.adicionar.adicionarRegistro(mostrarMenu);
                 break;
             case '2':
-                funcoes.listar.atualizarRegistro(mostrarMenu);
+                funcoes.listar.listarRegistros(mostrarMenu);
                 break;
             case '3':
                 funcoes.atualizar.atualizarRegistro(mostrarMenu);
